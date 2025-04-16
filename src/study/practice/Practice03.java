@@ -52,7 +52,8 @@ public class Practice03 {
 		String d = "4";
 		double c1 = Double.parseDouble(c);
 		int d1 = Integer.parseInt(d);
-		
+		//(int)Double.parseDouble(c) -> 3
+		//int result = (int)Double.parseDouble(c) * Integer.parseInt(d);
 		int result3 = (int)c1 * d1;
 		System.out.println(result3);
 		
@@ -66,6 +67,7 @@ public class Practice03 {
 	_____ result = _______;
 	System.out.println(result);
 	*/
+		/*
 		String e = "10";
 		int f = 3;
 		double g = 4.5;
@@ -74,6 +76,16 @@ public class Practice03 {
 		
 		String result4 = e + fg1;
 		System.out.println(result4);
+		*/
+		
+		String e = "10";
+		int f = 3;
+		double g = 4.5;
+		String result4 = e + (Integer.parseInt(e) + f);
+		//String result = e + ((int)(f*g));
+					//	 "10" + (int)(13.5) -> 13
+		System.out.println(result4);
+		
 		
 	/*
 	5. 계산결과가 "243" 이 나오도록 코드를 작성하세요.
@@ -83,6 +95,7 @@ public class Practice03 {
 	_____ result = _______;
 	System.out.println(result);
 	*/
+		/*
 		int h = 4;
 		double i = 3.4;
 		String j = "6.8";
@@ -97,6 +110,15 @@ public class Practice03 {
 		
 		String result5 = i2 + h1 + j3;
 		System.out.println(result5);
+		*/
+		
+		int h = 4;
+		double i = 3.4;
+		String j = "6.8";
+		
+		String result5 = ((int)Double.parseDouble(j) - h) + String.valueOf(h) + (int)i;
+		//										   6 - 4 = 2	 + "4" 		  +   3
+		System.out.println(result5);
 		
 	/*
 	6. 계산 결과가 아래와 같이 나오도록 코드를 작성하세요.
@@ -108,7 +130,7 @@ public class Practice03 {
 	1) 출력결과 : 7
 	2) 출력결과 : 8
 	*/
-		
+		/*
 		int s = 111;
 		int t = 13;
 		
@@ -116,6 +138,16 @@ public class Practice03 {
 		int result6 = ((t + 1) / 2) + 1;
 		System.out.println(result6);
 		System.out.println(result61);
+		*/
+		// 111/13 = 8.7 (몫: 8, 나머지: 7)
+		
+		int s = 111;
+		int t = 13;
+		int result6 = s % t; //1)
+		result6 = s / t; //2)
+		
+		System.out.println(result6);
+		
 	}
 
 }

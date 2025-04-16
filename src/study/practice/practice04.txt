@@ -1,0 +1,58 @@
+1. 아래 코드에서 예상되는 출력 결과를 작성하세요
+int x = 2;
+int y = 3;
+int z;
+
+System.out.println("x="+x + " y="+y);
+System.out.println(x + y);
+System.out.println(x++ + y++);
+System.out.println("x="+x + " y="+y);
+z = ++x + ++y;
+System.out.println("x="+x + " y="+y);
+z--;
+x += --y;
+System.out.println("x="+x + " y="+y + " z="+z);
+x = 10;
+z = x/y++;
+System.out.println("x="+x + " y="+y + " z="+z);
+System.out.println("x="+(x*2) + " y="+ ++y + " z="+z);
+System.out.println("x="+x + " y="+y + " z="+z);
+
+2. 아래 조건에 대한 출력 결과를 예상해서 작성하세요
+int a = 1;
+int b = 2;
+int c = 3;
+System.out.println( (a<b) && (c>=a) );
+System.out.println( (a == b ) || ( a >= b) || (c > 10) );
+boolean result = !(c == 3);
+System.out.println( result );
+
+
+
+1.
+출력값 : x=2y=3
+출력값 : 5
+출력값 : 5 	> 	y=4; x=3;
+출력값 : x=3y=4
+
+z=9;	> 	y=5 x=4
+
+출력값 : x=4y=5
+
+z=8;
+x=8;
+y=4;
+
+출력값 : x=8y=4z=7
+
+x=10; y=4; z=2;	>	y=5
+
+출력값 : x=10y=5z=2
+출력값 : x=20y=6z=2	>	y=6
+출력값 : x=10y=6z=2.5
+
+
+2.
+출력값 : true
+출력값 : false
+출력값 : false
