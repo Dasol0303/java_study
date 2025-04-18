@@ -99,7 +99,6 @@ public class Prac_h {
 		시리얼번호 : 332L1545K
 		*/
 	}
-	}
 	public static void prac02_2() {
 		/*
 		2. 가지고 있는 모니터 정보를 저장할 필요가 생겼습니다.
@@ -112,11 +111,9 @@ public class Prac_h {
 		소리출력가능여부 : false
 		*/
 	}
-	}
 	public static void prac02_3() {
 		//3. 3.14 값을 가지고 있는 pi 라는 실수형 변수를 만들고 화면에 출력하세요.
 		//예시) 원주율 : 3.14
-	}
 	}
 	public static void prac02_4() {
 		/*
@@ -129,7 +126,6 @@ public class Prac_h {
 		String englishScore = "90";
 		String artScore = "70";
 		*/
-	}
 	}
 	public static void prac02_5() {
 		/*
