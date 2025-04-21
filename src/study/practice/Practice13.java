@@ -45,7 +45,7 @@ public class Practice13 {
 	public static void q3() {
 		//3. 1~1000 까지의 수 중에서 5의 배수의 합을 출력하기.
 		int num;
-		int total = 0;
+		int total = 0; 
 		
 		//int d5 = num % 5 == 0;
 		
@@ -70,7 +70,7 @@ public class Practice13 {
 		
 		if (num>=1 && num<=50) {
 			for (int i=1; i<=num; i++) {
-				System.out.printf("*");
+				System.out.print("*");
 			}
 		} else {
 			System.out.println("1~50까지의 수를 입력해주세요.");
@@ -105,6 +105,7 @@ public class Practice13 {
 		6. 정수를 1부터 계속 누적으로 더한다. 이 더한 값이 1000 보다 작으면 계속 더하고
 		1000이 넘어가면 멈춘다. 멈추는 시점까지 누적으로 더해진 값을 출력하기.
 		*/
+		//1)
 		int num = 0;
 		int total;
 		
@@ -113,8 +114,30 @@ public class Practice13 {
 		}
 		System.out.println(total);
 		
+		//2)
+		num = 1;
+		total = 0;
 		
+		while(total<=1000) {
+			//total= total + num;
+			//num++;
+			total = total + num++;
+		}
+		System.out.println(total);
 		
+		//3)
+		num = 1;
+		total = 0;
+		
+		while(true) {
+			total = total + num;
+			num++;
+			
+			if(total >= 1000) {
+				break;
+			}
+		}
+		System.out.println(total);
 		
 	}
 	
