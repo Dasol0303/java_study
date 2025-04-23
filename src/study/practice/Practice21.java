@@ -6,8 +6,8 @@ public class Practice21 {
 		// q1();
 		// q2();
 		// q3();
-		// q4();
-		 q5();
+		 q4();
+		// q5();
 		// q6();
 	}
 	public static void q1() {
@@ -54,7 +54,7 @@ public class Practice21 {
 		****
 	*/
 		
-		for(int a=1; a<=5; a++) {
+		for(int a=1; a<=4; a++) {
 			System.out.print("*");
 			for(int b=1; b<a; b++) {
 				System.out.print("*");
@@ -75,9 +75,9 @@ public class Practice21 {
 		
 		for(int i=1; i<=num; i++) {
 			if(num % i == 0) {
-				int j = num / i;
-				System.out.println("" + i + " " + j);
-			} //헐 break!!! 어케 쓰더라 내일 아침에 학원가서 책 봐야겠다ㅠㅠ
+				//int j = num / i;
+				System.out.print(i + " ");
+			} 
 			
 			
 		}
@@ -108,9 +108,11 @@ public class Practice21 {
 		**
 		*
 	*/
+		
+
 		System.out.println("정수 입력 : ");
 		int num = scanner.nextInt();
-		
+		/*		
 		for(int i=1; i<=num; i++) {
 			System.out.print("*");
 			
@@ -120,7 +122,7 @@ public class Practice21 {
 			System.out.println();
 		}
 		
-		for(int i=1; i<=num; i++) {
+		for(int i=0; i<=num; i++) {
 			System.out.print("*");
 			
 			for(int j=1; j<=num-i; j++) {
@@ -129,6 +131,24 @@ public class Practice21 {
 			System.out.println();
 		}
 
+		System.out.println();
+		*/
+		
+		for(int i=1; i<num; i++) {
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		for(int i=num; i>=1; i--) {
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
 		
 
 	}
@@ -137,18 +157,30 @@ public class Practice21 {
 		5. 1+ (1+2)+ (1+2+3)+(1+2+3+4)+...+(1+2+3+...+10) ..결과 계산 최종결과는? //이거 220인데...
 	*/
 		
-		int total = 0;//1++2 
+		//int total = 0;//1++2 
 		int c = 0;
 		
 		for(int a=1; a<=10; a++) {
 			
 			for(int b=1; b<=a; b++) {
 				c += b;
-				total = c + b;
+				//total = c + b;
 			}
 		}
-		System.out.println(total);
-
+		System.out.println(c);
+		
+		c =0;
+		for(int i=1; i<=10; i++) {
+			//i: 1 ~ 10
+			//i*10 i*9 i*8
+			c = c + ( i * (11-i));
+			//		  1 * 10
+			//		  2 * 9
+			//		  3 * 8
+		}
+		System.out.println(c);
+		
+		
 	}
 	public static void q6() {
 	/*
@@ -160,8 +192,28 @@ public class Practice21 {
 		//even	-2 -4 -6 -8 -10 ...
 		// 
 		
+		int sum = 0;
+		int i = 1;
 		
+//		while (sum < 100) 
 		
+		while(true) {
+			
+			
+			if(i%2 == 0) {	//짝수
+				sum = sum - i;
+			} else { //홀수
+				sum = sum + i;
+			}
+			
+			if(sum >= 100)
+				break;
+			
+			i++;
+		}
+		
+		System.out.println("100 넘는 시점의 누적합 : " + sum);
+		System.out.println("마지막에 연산된 값 : " + i);
 		
 
 	}
