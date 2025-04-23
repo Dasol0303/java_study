@@ -118,7 +118,7 @@ public class Practice23_2 {
 		String addOrder;
 		
 		
-		while(true) {
+		while(true) {	//
 			//menuArr[2] priceArr[2] countArr[2]
 			System.out.println("========메 뉴========");
 			System.out.println(menuArr[0] + "		" + priceArr[0]);
@@ -128,18 +128,41 @@ public class Practice23_2 {
 			
 			System.out.print("메뉴 선택 : ");
 			menu = scanner.nextInt();
-			
+			if(!(menu>=1 && menu<=3)) {
+				System.out.println("잘못 입력하셨습니다. 다시 입력하세요!!!");
+				continue;
+			}
+
 			System.out.print("수량 선택 : ");
 			count = scanner.nextInt();
-	
+			if(menu==1) {
+				countArr[0] += priceArr[0] * count;
+			}
+			if(menu==2) {
+				countArr[1] += priceArr[1] * count;
+			}
+			if(menu==3) {
+				countArr[2] += priceArr[2] * count;
+			}
+
 			scanner.nextLine();
 			
 			System.out.print("추가주문 하시겠습니까? (y/n) : ");
 			addOrder = scanner.nextLine();
-		
-//			if (!(menu>=1 && menu<=3) || addOrder.equals("n")) {
-//				System.out.println("잘못 입력하셨습니다. 다시 입력하세요!!!");
-//			}
+			if (!(addOrder.equals("n") || addOrder.equals("y"))) {
+				System.out.println("잘못 입력하셨습니다. 다시 입력하세요!!!");
+
+//				if(addOrder.equals("n")) {
+//					System.out.println("====================");
+//
+//					System.out.println("====================");
+//					System.out.printf("총액 : %d");
+//
+//				}
+			}
+
+			
+			
 		}
 
 		
