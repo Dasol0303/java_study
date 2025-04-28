@@ -5,8 +5,8 @@ import java.util.Collections;
 public class Prac_01 {
 
 	public static void main(String[] args) {
-		//p1();
-		p2();
+		p1();
+		//p2();
 
 	}
 
@@ -14,9 +14,16 @@ public class Prac_01 {
 		Scanner scanner = new Scanner(System.in);
 		
 		
-		int[] menuArr = new int[3];
+		int[] menuArr = new int[3]; //메뉴 갯수 넣을까.. ㅇㅇ
 		String[] nameArr = {"아메리카노", "카페라떼", "바닐라라떼"};
-		int[] priceArr = new int[3];
+		int[] priceArr = new int[3]; //각 갯수의 총 가격 넣자!
+		
+		System.out.println("==========메	뉴========");
+		
+		for(int i=0; i<nameArr.length; i++) {
+			
+		}
+		
 		
 	}
 	
@@ -58,7 +65,7 @@ public class Prac_01 {
 				personArr[i] += num;
 				continue;
 			}
-			if(num>100) {
+			if(num<=1 && num>100) {
 				num = 0;
 				i--;
 				System.out.println("없는 층입니다. 다시 입력해주세요.");
