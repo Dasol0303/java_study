@@ -1,13 +1,16 @@
 package study.practice.practice35;
 
+import java.util.ArrayList;
+
 public class Order {
 	// 필드(인스턴스 필드)
 	int orderNum;
-	Menu[] menus; //집합 관계..?
+	ArrayList<Menu> menus; //집합 관계..?
 	int total;
 	
+	
 	// 생성자
-	public Order(int i, Menu[] arr) {
+	public Order(int i, ArrayList<Menu> arr) {
 		orderNum = i;
 		menus = arr;
 	}
@@ -18,10 +21,16 @@ public class Order {
 		//주문한 메뉴는 menus 
 		//메뉴당 금액 menus -> Menu -> price
 	//1)
+//		int sum = 0;
+//		for(int i=0; i<menus.length; i++) {
+//			sum += menus[i].price;
+//		}
 		int sum = 0;
-		for(int i=0; i<menus.length; i++) {
-			sum += menus[i].price;
+		for(int i=0; i<menus.size(); i++) {
+			sum += menus.get(i).price;
 		}
+		
+		
 	//2)
 		sum = 0;
 		for(Menu menu : menus) {
