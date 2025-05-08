@@ -2,11 +2,13 @@ package study.practice;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 public class Prac_01 {
 
 	public static void main(String[] args) {
-		p1();
+		//p1();
 		//p2();
+		test();
 
 	}
 
@@ -145,6 +147,27 @@ public class Prac_01 {
 		
 		
 		
+	}
+	
+	public static void test() {
+        int answer = 0;
+        int[] array = {1, 2, 3, 3, 3, 4};
+        
+        int count = 0;
+        
+        HashMap<Integer, Integer> map1 = new HashMap<Integer, Integer>();
+        
+        for(int i : array) {
+            map1.put(array[i],0);
+        }
+        
+//        if(map1.containsKey(array[i])) {
+//
+//        }
+//        
+        
+        System.out.println(answer);
+        //return answer;
 	}
 	
 }
