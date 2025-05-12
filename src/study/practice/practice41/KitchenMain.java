@@ -1,6 +1,6 @@
 package study.practice.practice41;
 
-public class KitchenMain {
+public class KitchenMain { 
 
 	public static void main(String[] args) {
 		
@@ -29,7 +29,7 @@ public class KitchenMain {
 							//용량 색상
 		System.out.println(trash01.toString());
 		trash01.isOpen(true, 3); //쓰레기통 열기 유무, 버리려는 쓰레기 용량
-		trash01.isOpen(true, 0.5);
+		//trash01.isOpen(true, 0.5);
 		System.out.println();
 		
 		Cup cup01 = new Cup(500, "메탈", "회색"); //컵

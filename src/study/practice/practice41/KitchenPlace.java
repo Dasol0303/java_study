@@ -1,6 +1,6 @@
 package study.practice.practice41;
 
-public class KitchenPlace {//공간
+public class KitchenPlace {//공간 
 	
 	String color; //벽지 색
 	int heigthM;//층고

@@ -4,10 +4,10 @@ public class Supplies extends Furniture{ //용품
 	
 }
 
-class Dust extends Furniture{ //쓰레기통
+class Dust extends Furniture{ //쓰레기통 
 	boolean isOpen;
 	double capacity; //버리려는 쓰레기의 양
-	double remainTrash; //남은 용량
+	double remainTrash; //현재 쓰레기통 안의 쓰레기 용량
 	
 	Dust() {}
 	Dust(int liter, String color) {
@@ -21,7 +21,7 @@ class Dust extends Furniture{ //쓰레기통
 		if(isOpen == true) { 
 			dustOpen();
 		}
-		System.out.println("남은 용량:" + remainTrash + "L");
+		System.out.println("현재 쓰레기통 안의 쓰레기:" + remainTrash + "L");
 	}
 	
 	public void dustLast() {
@@ -30,19 +30,18 @@ class Dust extends Furniture{ //쓰레기통
 	}
 	public void dustOpen() {
 		System.out.println("쓰레기통을 연다.");
-		if(liter > capacity) {
-			remainTrash = liter - capacity;
+		
+		if(liter < capacity) {
+			remainTrash += capacity;
+			if(remainTrash >= liter) {
+				System.out.println("쓰레기를 비운다.");
+				capacity = remainTrash - liter;
+				remainTrash = 0;
+				remainTrash += capacity;
+			}
 			dustLast();
 		}
-		if(remainTrash > capacity) {
-			remainTrash = remainTrash + capacity;
-			dustLast();
-		}
-		if(liter <= capacity && remainTrash < capacity) {
-			remainTrash = (double)capacity - liter;
-			System.out.println("쓰레기통을 비운다.");
-			dustLast();
-		}	
+
 	}
 
 	public String toString() {

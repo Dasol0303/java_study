@@ -1,6 +1,6 @@
 package study.practice.practice41;
 
-public class Furniture { //가구
+public class Furniture { //가구 
 	
 	String brand; //브랜드
 	int liter; //리터
