@@ -1,6 +1,7 @@
 package study.practice.practice43.practice43_2;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -9,8 +10,7 @@ public class FoodTruck {
 
 	String truckBrandName; //팔천순대	밝은분식	같은 트럭 이름 
 	String owner;
-	List<Food> foodList;	//판매하는 음식 리스트
-	Map<Food> foodMap;
+	Map<Integer, Food> foodList;	//판매하는 음식 리스트
 	
 	int totalSales; //총 매출액
 	boolean isOpened; //영업중 여부 true 열었다
@@ -22,7 +22,7 @@ public class FoodTruck {
 	public FoodTruck() {
 		totalSales = 0;
 		isOpened = false;
-		foodList = new ArrayList<Food>();
+		foodList = new HashMap<Integer, Food>();
 		salesInfoList = new ArrayList<SalesInfo>();
 	}
 	
@@ -31,16 +31,18 @@ public class FoodTruck {
 		this.owner = owner;
 		totalSales = 0;
 		isOpened = false;
-		foodList = new ArrayList<Food>();
+		foodList = new HashMap<Integer, Food>();
 		salesInfoList = new ArrayList<SalesInfo>();
 	}
 	
-	public void addMenu(Food food) {
-		foodList.add(food);
+	public void addMenu(int num, Food food) {
+		foodList.put(num, food);
 	}
-	public void addMenu(String name, int price) {
-		foodList.add(new Food(name, price));
+	public void addMenu(int num, String name, int price) {
+		
+		foodList.put(num, new Food(name, price));
 	}
+	
 	
 	
 	public void doSales() { //푸드트럭 장사 메소드
@@ -106,7 +108,7 @@ public class FoodTruck {
 		System.out.println("[---메뉴리스트---]");
 
 		for(int i=0; i<foodList.size(); i++) {
-			System.out.println((i+1) + ". " + foodList.get(i).getFoodInfo());
+			System.out.println((i+1) + ". " + foodList.get(i+1).getFoodInfo());
 		}
 	}
 	
@@ -119,7 +121,7 @@ public class FoodTruck {
 		int order = scanner.nextInt();
 		
 		//order 메뉴 범위안에 있는가?
-		Food orderFood = foodList.get(order-1);
+		Food orderFood = foodList.get(order);
 		
 		//재고가 없으면 주문 불가
 		if(orderFood.stock < 1) {
@@ -164,8 +166,8 @@ public class FoodTruck {
 	//마감 /종료
 	public void finishSales() {
 		int lossSales = 0; //폐기된 손해금액
-		for(Food food : foodList) {
-			lossSales += (food.price * 0.3) * food.stock;
+		for(int food : foodList.keySet()) {
+			lossSales += (foodList.get(food).price * 0.3) * foodList.get(food).stock;
 		}
 		
 		System.out.println("===[마감 정산 내역]===");

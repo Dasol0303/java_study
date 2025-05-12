@@ -10,14 +10,15 @@ public class FoodTruckMain {
 		
 		//메뉴 추가 방식
 		Food food = new Food("김밥", 3000);
-		//Food foodMap = new Food(1, Food());
+		
+		
 		
 		//1)
-		ft1.addMenu(food);
+		ft1.addMenu(1, food);
 		//2)
-		ft1.addMenu(new Food("떡볶이", 5000));
+		ft1.addMenu(2, new Food("떡볶이", 5000));
 		//3)
-		ft1.addMenu("핫도그", 2000);
+		ft1.addMenu(3, "핫도그", 2000);
 		
 		ft1.doSales();
 		

@@ -12,13 +12,6 @@ public class Food {
 		this.price = price;
 		stock = 5; //임시 재고 초기화 (초기에 5개 재고가 있다고 가정)
 	}
-	public Food(int menuNum, int price) {
-		this.menuNum = menuNum;
-		this.price = price;
-		stock = 5;
-		
-	
-	}
 
 	public String toString() { 
 		return String.format("%s 가격:%d원 재고:%d개", name, price, stock);
