@@ -1,5 +1,7 @@
 package study.practice.pratice52;
 
+import java.sql.Date;
+
 public class Professor {
 
 		int profno;
@@ -7,10 +9,30 @@ public class Professor {
 		String id;
 		String position;
 		int pay;
+		//sql.date <-> LocalDateTime, String
+		
+		Date hiredate;
+		int bonus;
 		int deptno;
+		String email;
+		String hpage;
 
 		
 		public Professor() {}
+		
+		public Professor(int profno, String name, String id, String position, int pay, Date hiredate, int bonus,
+				int deptno, String email, String hpage) {
+			this.profno = profno;
+			this.name = name;
+			this.id = id;
+			this.position = position;
+			this.pay = pay;
+			this.hiredate = hiredate;
+			this.bonus = bonus;
+			this.deptno = deptno;
+			this.email = email;
+			this.hpage = hpage;
+		}
 		
 		public Professor(int profno, String name, String id, String position, int pay, int bonus) {
 			this.profno = profno;

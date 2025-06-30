@@ -1,5 +1,6 @@
 package study.db.v3;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import study.db.v1.Dept;
@@ -61,6 +62,31 @@ public class DBMain {
 			System.out.println("수정이 잘 됐나보다");
 		}
 		
+		ProfessorDAO professorDAO = new ProfessorDAO();
+		
+		ProfessorDTO p = professorDAO.findProfessorByProfno(2002);
+		if(p != null)
+			System.out.println(p);
+		
+		
+		//p.getHiredate().getDayOfMonth();
+		//p.getHiredate().getDate();
+		//p.getHiredate().getYear();
+		//줄 그어진 거 사용은 가능하나 다음 버전에서 사라질 수도 있다는 이야기
+		
+		/*
+		ProfessorDTO saveP = new ProfessorDTO (9091, "name", "id", "position", 
+											111, LocalDateTime.now(),
+											100, 50, "email", "hpage");
+		*/
+		
+		ProfessorDTO saveP = new ProfessorDTO (9991, "name", "id", "position", 
+				111, "2025-06-01",
+				100, 50, "email", "hpage");
+		int rs5 = professorDAO.saveProfessor(saveP);
+		if(rs5 > 0) {
+			System.out.println("saveP 잘 저장됐다");
+		}
 		
 		
 	}

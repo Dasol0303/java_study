@@ -37,6 +37,11 @@ public class ProductDTO {
 		this.p_price = p_price;
 	}
 
+	@Override
+	public String toString() {
+		return "ProductDTO [p_code=" + p_code + ", p_name=" + p_name + ", p_price=" + p_price + "]";
+	}
+
 
 	
 }
