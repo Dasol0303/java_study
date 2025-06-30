@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import study.db.v2.DBConnectionManager;
-import study.practice.pratice52.Professor;
+import study.practice.practice52.Professor;
 
 public class ProfessorDAO {
 	
