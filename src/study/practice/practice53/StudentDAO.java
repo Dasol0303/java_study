@@ -147,7 +147,6 @@ public class StudentDAO {
 		return result;
 	}
 
-	int[] n;
 	
 	
 }
