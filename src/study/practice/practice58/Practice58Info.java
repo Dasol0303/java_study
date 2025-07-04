@@ -120,7 +120,7 @@ public class Practice58Info {
 				
 				List<ItemDTO> itemList = new ArrayList<ItemDTO>();
 				for(int k=0; k<items.size(); k++) {
-					JSONObject item =(JSONObject)items.get(i);
+					JSONObject item =(JSONObject)items.get(k);
 					
 					ItemDTO itemDTO = new ItemDTO();
 					
